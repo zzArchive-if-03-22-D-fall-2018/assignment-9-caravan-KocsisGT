@@ -268,9 +268,9 @@ TEST(optimize_load)
   ASSERT_EQUALS(4, get_caravan_speed(gobi_express));
 
 	optimize_load(gobi_express);
-	// assert(caravan_speed(&gobi_express) == 10, tc, "Caravan speed expected to be 10");
-	// assert(actual_speed(&willi) == 10, tc, "Willi's speed expected to be 10");
-	// assert(actual_speed(&mitzi) == 15, tc, "Mitzi's speed expected to be 15");
-	// assert(actual_speed(&habschi) == 10, tc, "Habschi's speed expected to be 10");
-	// assert(actual_speed(&sissi) == 10, tc, "Sissi's speed expected to be 10");
+  ASSERT_EQUALS(10, get_caravan_speed(gobi_express));
+  ASSERT_EQUALS(10, get_actual_speed(willi));
+  ASSERT_EQUALS(15, get_actual_speed(mitzi));
+  ASSERT_EQUALS(10, get_actual_speed(habschi));
+  ASSERT_EQUALS(10, get_actual_speed(sissi));
 }
